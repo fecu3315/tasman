@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Snake</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="web/javascript/jquery-1.11.2.js"></script>
+<style>
+#board {
+	background-color: white;
+	border: 3px solid red;
+	width: 800px;
+	height: 600px;
+}
+
+.tile {
+	background-color: blue;
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+.snake {
+	background-color: black;
+}
+.fruit {
+	background-color: orange;
+}
+</style>
+<script>
+$(document).ready(function() {
+	var boardWidth = 20;
+	var boardHeight = 15;
+	var tileWidth = 40;
+	var tileHeight = 40;
+	var snakeY = 1;
+	var snakeX = 1;
+	var snake = [ [1,1] ];
+	var fruit = [10,5];
+	
+	function drawBoard() {
+		var coordinate;
+		for(var i = 0 ; i < boardHeight ; i++) {
+			for(var j = 0 ; j< boardWidth ; j++) {
+				coordinate = i + "_" + j;
+				$('#board').append('<div class="tile" id="'+coordinate+'"></div>');
+			}
+		}
+	}
+	
+	function drawSnake() {
+		var id;
+		for(var i = 0 ; i < snake.length ; i++) {
+			id = snake[i][0] + "_" + snake[i][1];
+			$('#' + id).addClass('snake');
+		}
+		
+	}
+	
+	function drawFruit() {
+		var id = fruit[0] + "_" + fruit[1];
+		$('#' + id).addClass('fruit');
+	}
+	
+	drawBoard();
+	drawSnake();
+	drawFruit();
+});
+</script>
+</head>
+<body>
+
+<div id="board"></div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Bootstrap</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="web/javascript/jquery-1.11.2.js"></script>
+<script src="web/javascript/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="web/css/bootstrap.min.css">
+<link ref="stylesheet" href="web/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="web/css/font-awesome.min.css">
+<style>
+header {
+	height: 550px;
+	background-color: #f16251;
+}
+#header-dropdown {
+	margin-top: 20px;
+}
+#dropdownMenu1 {
+	background-color: yellow;
+}
+.dropdown i {
+	font-size: 30px;
+}
+.navbar-nav.nav-justified > li {
+  float: none;
+}
+.space {
+	height: 100px;
+}
+.bg1 {
+	background: url(web/image/bg_4.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 400px;
+	height: auto;
+	padding-top: 100px;
+}
+#bg-message{
+	color: white;
+	font-size: 25px;
+	font-weight:bold;
+	padding: 20px;
+	background-color:#222222;
+	filter: alpha(opacity=80);
+  	/* IE */
+  	-moz-opacity: 0.8;
+  	/* Mozilla */
+  	opacity: 0.8;
+}
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+
+<div id="wrap">
+	
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<h1>Happy Scroll</h1>
+					<p class="lead">{A Bootstrap Template}</p>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="dropdown pull-right" id="header-dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+							<i class="glyphicon glyphicon-cog"></i>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div>
+		<nav class="navbar navbar-inverse navbar-static-top affix-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav nav-justified" id="myNavbar">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Page 1</a></li>
+						<li><a href="#">Page 2</a></li> 
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 3
+					        <span class="caret"></span></a>
+					        <ul class="dropdown-menu">
+					            <li><a href="#">Page 3-1</a></li>
+					            <li><a href="#">Page 3-2</a></li>
+					            <li><a href="#">Page 3-3</a></li> 
+					        </ul>
+						</li> 
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	
+	<div class="space"></div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 text-center">
+				<h1>Sticky Footer with Fly-in Navbar</h1>
+				<p class="lead">Twitter Bootstrap is a front-end toolkit to rapidly build web applications.</p>
+				<p>Bootstrap is a framework that uses some of the latest browser techniques to provide you with stylish typography, navigation, buttons, tables, etc. One of the primary changes in Bootstrap 3 is an emphasis on Mobile-First responsive design. The goal is to elevate the mobile experience to a first-class citizen of the design process, because several billion mobile users is quite a large market to tap into. So, sites built with the current Bootstrap version target mobile devices and scale for larger screens depending on screen size.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="space"></div>
+	
+	<section class="bg1">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text-center" id="bg-message">
+					Try and Tweak Different Layouts
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<div class="space"></div>
+</div>
+
+
+</body>
+</html>

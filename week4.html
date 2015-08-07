@@ -1,0 +1,85 @@
+<html>
+<head>
+<script src="web/javascript/jquery-1.11.2.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() { // 이 부분은 document 가 load 가 끝나면 이라는 뜻입니다.
+	$('ul.menu > li').click(function() {
+		$('ul.subMenu').slideUp(); // subMenu 전부닫기
+		var submenu = $(this).find('ul.subMenu');
+		if(submenu.length > 0) {
+			if(submenu.is(':visible')) {
+				submenu.slideUp();
+			} else {
+				submenu.slideDown();
+			}
+		}
+	});
+});
+</script>
+
+<style>
+ul.menu {
+	padding-left: 0px;
+	width: 150px;
+}
+ul.menu li {
+	list-style: none;
+	padding-left: 0px;
+}
+ul.menu li:hover {
+	background-color: #777;
+	cursor: pointer;
+}
+ul.menu > li {
+	
+	background-color: #333;
+	text-align: left;
+	color: white;
+	padding: 8px 10px;
+	border-bottom: 1px solid #c1c1c1;
+}
+ul.subMenu {
+	display: none;
+	padding-left: 20px;
+}
+ul.subMenu > li {
+	
+	text-align: left;
+	color: white;
+	padding: 8px 10px;
+	border-bottom: 1px solid #d7d7d7;
+}
+ul.subMenu > li:last-child {
+	border-bottom: none;
+}
+</style>
+</head>
+<body>
+
+<ul class="menu">
+	<li>Home</li>
+	<li>About US
+		<ul class="subMenu">
+			<li>History</li>
+			<li>People</li>
+			<li>Media</li>
+		</ul>	
+	</li>
+	<li>Product
+		<ul class="subMenu">
+			<li>Product 1</li>
+			<li>Product 1</li>
+			<li>Product 1</li>
+			<li>Product 1</li>
+			<li>Product 1</li>
+			<li>Product 1</li>
+			<li>Product 1</li>
+		</ul>	
+	</li>
+	<li>Contect US</li>
+</ul>
+
+</body>
+</html>
+

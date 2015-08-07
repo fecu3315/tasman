@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Loop</title>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+</head>
+<body>
+<script>
+// 1 ~ 100까지 합 구하기
+var total = 0;
+
+for(var i = 1 ; i <= 100 ; i++) {
+	total = total + i;
+}
+document.write('1 부터 100까지의 합은: ' + total);
+
+document.write('<br/><br/><hr/><br/>');
+// 1 ~ 100까지 짝수의 합 구하기
+var total = 0;
+
+for(var i = 1 ; i <= 100 ; i++) {
+	// 숫자를 2로 나누어서 나머지가 0이면 짝수입니다
+	if(i % 2 === 0) {
+		total = total + i;
+	}
+}
+document.write('1 부터 100까지 짝수의 합은: ' + total);
+
+document.write('<br/><br/><hr/><br/>');
+
+// 9x9 단을 출력 하시오
+document.write('9x9 단<br/><br/>');
+var num;
+for(var i = 1 ; i <= 9 ; i++) {
+	for(var j =1 ; j <= 9 ; j++) {
+		num = i * j;
+		document.write(i + ' x ' + j + ' = ' + num);
+		if(j < 9) {
+			document.write(', ');
+		}
+	}
+	document.write('<br/>');
+}
+
+document.write('<br/><br/><hr/><br/>');
+
+// Array 에 들어있는 숫자들의 총합과 평균을 구하기
+var array = [10, 34, 99, 1, 43, 86, 29, 92, 7, 57];
+var total = 0;
+var average;
+
+for(var i = 0 ; i < array.length ; i++) {
+	total = total + array[i];
+}
+average = total / array.length;
+
+document.write('총합: ' + total + '<br/>');
+document.write('평균: ' + average);
+
+document.write('<br/><br/><hr/><br/>');
+
+// 여러 과목별 학생들의 시험 총점과 평균 구하기
+// 총점 구하는 function 과 평균 구하는 function 을 만들기
+
+function totalScore(scores) {
+	var total = 0;
+	for(var i = 0 ; i < scores.length ; i++) {
+		total += scores[i];
+	}
+	return total;
+}
+
+function averageScore(scores) {
+	return totalScore(scores) / scores.length;
+}
+var math_scores = [70, 95, 56, 100, 88, 65];
+var english_score = [83, 73, 90, 100, 55, 30];
+
+var math_total_score = totalScore(math_scores);
+var math_avg_score = averageScore(math_scores);
+document.write('Math 총합: ' + math_total_score + '<br/>');
+document.write('Math 평균: ' + math_avg_score + '<br/><br/>');
+
+var english_total_score = totalScore(english_score);
+var english_avg_score = averageScore(english_score);
+document.write('English 총합: ' + english_total_score + '<br/>');
+document.write('English 평균: ' + english_avg_score + '<br/><br/>');
+</script>
+</body>
+</html>

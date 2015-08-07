@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Loop</title>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+</head>
+<body>
+<script>
+// Practice #1 solution
+// 1 ~ 100까지 중 3의 배수의 총합을 구해보세요.
+var total = 0;
+for(var i = 1 ; i <= 100 ; i++) {
+	if( i % 3 === 0) {
+		total += i;
+	}
+}
+
+// Practice #2 solution
+// 1 ~ 100까지 중 3의 배수이고 4의 배수가 아닌 수를 출력 하세요.
+for(var i = 1 ; i <= 100 ; i++) {
+	if( i % 3 === 0 && i % 4 != 0) {
+		//document.write(i + '<br/>');
+	}
+}
+
+// Practice #3 solution
+// 1800년 부터 2100 까지 윤년인 해를 출력 하세요.
+for(var year = 1800 ; year <= 2400 ; year++) {
+	if( year % 4 === 0 && (year % 100 != 0 || year % 400 == 0) ) {
+		//document.write(year + '<br/>');
+	}
+}
+
+// Practice #4 solution
+var total = 0;
+var rowTotal = 0;
+for(var i = 1 ; i <= 10 ; i++) {
+	rowTotal = 0;
+	for(var j =1 ; j <= i ; j++) {
+		rowTotal = rowTotal + j; 
+		document.write(j);
+		if(j < i) {
+			document.write(' + ');
+		}
+	}
+	document.write(' = ' + rowTotal);
+	total = total + rowTotal;
+	document.write('<br/>');
+}
+document.write('Total: ' + total);
+
+// Practice #5 solution
+var evenTotal = 0;
+var oddTotal = 0;
+var a = [3,10,72,27,1,99,42,89,32,94];
+
+for(var i = 0 ; i < a.length  ; i++) {
+	if( i % 2 === 0) {
+		evenTotal += a[i];
+	} else {
+		oddTotal += a[i];	
+	}
+}
+
+// Practice #6 solution
+//km 를 mile 로 변환 해주는 function 을 만들어 보세요.
+
+function convertKmToMile(km) {
+	return km / 1.6;
+}
+
+function convertMiltToKm(mile) {
+	return mile * 1.6;
+}
+
+document.write('100 km 는 ' + convertKmToMile(100) + ' mile 이다.');
+</script>
+</body>
+</html>
