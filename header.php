@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Tasman Academy</title>
+	<title>Tasman Feature 1</title>
 	
 	<!-- Load jQuery -->
 	
