@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Tasman Feature 1</title>
+	<title>Feature 1</title>
 	
 	<!-- Load jQuery -->
 	
@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="web/css/superslides.css" />	
 	
 	<script>
-	$(document).ready(function() { // 이 부분은 document 가 load 가 끝나면 이라는 뜻입니다.
+	$(document).ready(function() { 
 		$('.menuList li').hover(function() {
 			if($(this).children('.subMenu').length > 0){
 				$(this).children('ul.subMenu').show();
